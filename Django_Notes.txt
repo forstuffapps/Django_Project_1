@@ -1,0 +1,17 @@
+
+
+
+create virtual environment : py -m venv myworld
+Activate the environment : myworld\Scripts\activate.bat
+
+get insite the environment and then install django
+py -m pip install Django
+
+check the django version
+django-admin --version
+
+create a django project
+django-admin startproject my_tennis_club
+
+Run the django project
+py manage.py runserver
