@@ -6,14 +6,17 @@ List of all the memebrs
 
 
  {% block content %}
- <h1><a href='/'>HOME</a></h1>
- <h1>Members</h1>
-
-    <ul>
-        {% for x in mymembers %}
-        <li><a href="/details/{{x.id}}">{{x.firstname}}  {{x.lastname}}</a></li>
-        {% endfor %}
-    </ul>
+ <div class="mycard">
+  <h1>Members</h1>
+  <ul>
+    {% for x in mymembers %}
+    <!--  
+    <li onclick='window.location = "details/{{ x.id }}"'>{{ x.firstname }} {{ x.lastname }}</li>
+    -->
+    <li><a href="/details/{{x.id}}">{{x.firstname}}  {{x.lastname}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
   {% endblock %}
     
 
