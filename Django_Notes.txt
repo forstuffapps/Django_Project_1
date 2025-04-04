@@ -15,3 +15,20 @@ django-admin startproject my_tennis_club
 
 Run the django project
 py manage.py runserver
+
+
+
+
+
+from django.contrib.auth.models import User
+
+# If you're not sure of the username, list all usernames:
+print(list(User.objects.all().values_list('username', flat=True)))
+
+# Replace 'your_admin_username' with your actual username
+user = User.objects.get(username='your_admin_username')
+user.set_password('your_new_password')
+user.save()
+
+print("Password updated successfully!")
+
